@@ -1,0 +1,19 @@
+﻿@model IEnumerable<prjProject.Models.TableNationalParks1081741>
+
+@{
+    ViewBag.Title = "Number";
+}
+<form method="post" action="@Url.Action("Number")">
+    <div class="panel panel-primary">
+        <div class="panel-heading">編號查詢</div>
+        <div class="panel-body">
+            <p>
+                國家公園編號:
+                <input type="text" class="form-control" name="txtNum" required />
+            </p>
+            <p>
+                <input type="submit" class="btn btn-primary" value="查詢" />
+            </p>
+        </div>
+    </div>
+</form>

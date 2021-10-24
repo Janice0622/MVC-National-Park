@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+<p></p>
+<form method="post" action="@Url.Action("Login")">
+    <div class="panel panel-info">
+        <div class="panel-heading">登入</div>
+        <div class="panel-body">
+            <p>
+                帳號：
+                <input type="text" class="form-control" name="txtUid" required />
+            </p>
+            <p>
+                密碼：
+                <input type="password" class="form-control" name="txtPwd" required />
+            </p>
+            <p>
+                <input type="submit" class="btn btn-info" value="查詢" />
+            </p>
+            <p class="text-danger">@ViewBag.Err</p>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <img class="img-rounded" src="~/images/1.jpg" width="220" height="220">
+        </div>
+        <div class="col-md-4">
+            <img class="img-rounded" src="~/images/2.jpg" width="220" height="220">
+        </div>
+        <div class="col-md-4">
+            <img class="img-rounded" src="~/images/3.jpg" width="220" height="220">
+        </div>
+    </div>
+    <p>
+        <br><br>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <img class="img-rounded" src="~/images/4.jpg" width="220" height="220">
+            </div>
+            <div class="col-md-4">
+                <img class="img-rounded" src="~/images/5.jpg" width="220" height="220">
+            </div>
+            <div class="col-md-4">
+                <img class="img-rounded" src="~/images/6.jpg" width="220" height="220">
+            </div>
+        </div>
+</form>
+
+
+

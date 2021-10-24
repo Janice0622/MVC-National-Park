@@ -1,0 +1,86 @@
+﻿@model IEnumerable<prjProject.Models.TableNationalParks1081741>
+
+@{
+    ViewBag.Title = "NumResult";
+    string imgName;
+}
+
+<h2>國家公園編號</h2>
+
+@if (Model.Count() == 0)
+{
+    <div class="alert alert-info">
+        <strong>無符合之資料</strong>
+    </div>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.名稱)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.縣市)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.地址)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.電話)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.網址)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.資源特色)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.介紹)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.名稱)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.縣市)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.地址)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.電話)
+                </td>
+                <td>
+                    <a href="@item.網址">
+                        @Html.DisplayFor(modelItem => item.網址)
+                    </a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.資源特色)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.介紹)
+                </td>
+            </tr>
+        }
+
+    </table>
+    <table>
+        <tr>
+            <td style="border:0">
+             @foreach (var item1 in Model)
+             {
+                imgName = "n" + item1.編號.ToString() + ".jpg";
+                <img src="~/images/@imgName" />
+             }
+            </td>
+        </tr>
+    </table>
+    
+}
